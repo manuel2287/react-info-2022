@@ -10,7 +10,8 @@ const obtenerProductosDelServidor = async () => {
 }
 
 const confeccionarTarjetasDeProductos = (productos) => {
-    return productos.map(producto => {
+    return productos
+    .map(producto => {
         return `
             <article class="card">
                 <img src="${producto.image}" alt="${producto.image}" />
@@ -26,8 +27,7 @@ const confeccionarTarjetasDeProductos = (productos) => {
             ${prev}
             ${curr}
         `
-    }, '')
-    ;
+    }, '');
 }
 
 const listarProductosEnElHTML = async (evento) => {
