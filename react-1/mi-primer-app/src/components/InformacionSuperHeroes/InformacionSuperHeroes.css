@@ -1,0 +1,20 @@
+.informacion-super-heroes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.informacion-super-heroe {
+    width: 150px;
+    border: solid 1px;
+    margin: 20px;
+}
+
+.informacion-super-heroe img {
+    height: 100px;
+    width: 100%;
+}
+
+.informacion-super-heroe ul {
+    padding: 5px;
+}
