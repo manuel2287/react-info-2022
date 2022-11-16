@@ -22,8 +22,9 @@ const PaginaSuperHeroes = () => {
         }
     }, [informacion]);
 
+    const componente = <img src="https://media.tenor.com/ZqgX_wttrvAAAAAM/goku.gif" alt="goku" />;
     if(loading || !informacion) {
-        return <div> Cargando... </div>
+        return componente;
     }
 
     return (

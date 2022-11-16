@@ -7,8 +7,15 @@ const TarjetaSuperHeroe = ({
     age,
     powers
 }) => {
+    const click = (event) => {
+        console.log(event)
+    };
+
     return (
-        <article className="informacion-super-heroe">
+        <article 
+            className="informacion-super-heroe"
+            onClick={click}    
+        >
             <ImagenSuperHeroe />
             <InformacionSuperHeroe 
                 name={name}
@@ -25,9 +32,9 @@ export const TarjetaSuperHeroeList = ({
     return (
         <section className="informacion-super-heroes">
         { 
-            miembros.map((miembro, index) => 
+            miembros.map((miembro, index)   => 
                 <TarjetaSuperHeroe
-                    key={index}
+                    key={`${index}+${miembro.name.replace(' ', '+')}`}
                     {...miembro}
                 />
             )
