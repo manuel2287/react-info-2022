@@ -6,3 +6,10 @@ export const getListadoPeliculas = async (criterioBusqueda, paginaActual) => {
     const peliculas = await respuesta.json();
     return peliculas;
 }
+
+export const getPelicula = async idPelicula => {
+    const respuesta = await fetch(`${OMDB_API}?apikey=${API_KEY}&i=${idPelicula}`);
+    const pelicula = await respuesta.json();
+    return pelicula;
+}
+

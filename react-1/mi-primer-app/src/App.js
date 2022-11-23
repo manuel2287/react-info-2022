@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import Error404 from './components/Errores/404';
 import PaginaBuscador from './paginas/PaginaBuscador';
+import PaginaDetalle from './paginas/PaginaDetalle';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/peliculas",
     element: <PaginaBuscador/>,
+  },
+  {
+    path: "/peliculas/:id",
+    element: <PaginaDetalle />,
   },
 ]);
 
