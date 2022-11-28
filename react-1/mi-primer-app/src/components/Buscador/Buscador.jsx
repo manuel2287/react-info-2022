@@ -17,6 +17,7 @@ const Buscador = ({ onBuscar }) => {
         placeholder="Buscar Peliculas"
         inputProps={{ 'aria-label': 'search google maps' }}
         value={criterioBusqueda}
+        role="searchbox"
         onChange={(e) => { 
           setCriterioBusqueda(e.target.value)
         }}
@@ -26,8 +27,11 @@ const Buscador = ({ onBuscar }) => {
         sx={{ p: '10px' }}
         aria-label="search"
         onClick={() => {
-          onBuscar(criterioBusqueda)
+          if(criterioBusqueda.length > 2) {
+            onBuscar(criterioBusqueda)
+          }
         }}
+        role="button"
       >
         <SearchIcon />
       </IconButton>
